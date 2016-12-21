@@ -7,7 +7,7 @@ import sys
 def grab_json(base_url):
     try:
         url = base_url + "/wp-json/wp/v2/users"
-        r = requests.get(url)
+        r = requests.get(url, verify=False)
     except Exception:
         return False
     try: # this needs replacing with a regex check
